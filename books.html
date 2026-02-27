@@ -38,22 +38,29 @@
     <!-- Spinner End -->
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
-            <div class="col-lg-6 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt me-2"></i> Duhok, IRAQ</small>
-                <small class="ms-4"><i class="fa fa-envelope me-2"></i>firas.nazarene@yahoo.com</small>
-            </div>
-            <div class="col-lg-6 px-5 text-end">
-                <a class="text-white-50 ms-3" href="https://www.facebook.com/profile.php?id=100062635523420" target="_blank">
-    <i class="fab fa-facebook-f"></i> </a>
-                <a class="text-white-50 ms-3" href="https://www.instagram.com/the_nazarene_church?igsh=YjJlaGthaGJhY2Jm"><i class="fab fa-instagram"></i></a>
-				
-                <small> تابعنا  على </small>
-            </div>
+<!-- Navbar Start -->
+
+<div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+    <!-- الشريط العلوي المعدل ليكون 3 أقسام -->
+    <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+        <div class="col-lg-4 px-6 text-start">
+            <small><i class="fa fa-map-marker-alt me-2"></i> Duhok, IRAQ</small>
+            <small class="ms-4"><i class="fa fa-envelope me-2"></i>firas.nazarene@yahoo.com</small>
+        </div>
+        
+        <!-- الجملة في منتصف الشاشة تماماً -->
+        <div class="col-lg-4 text-center">
+            <small class="text-black">أَنَا هُوَ الطَّرِيقُ وَالْحَقُّ وَالْحَيَاةُ. لَيْسَ أَحَدٌ يَأْتِي إِلَى الآبِ إِلاَّ بِي (يو 14: 6)</small>
         </div>
 
+        <div class="col-lg-4 px-5 text-end">
+            <small> تابعنا على </small>
+            <a class="text-white-50 ms-3" href="https://www.facebook.com/profile.php?id=100062635523420" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="text-white-50 ms-3" href="https://www.instagram.com/the_nazarene_church?igsh=YjJlaGthaGJhY2Jm" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <!-- القائمة الرئيسية Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
             <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
                 <h1 class="fw-bold text-primary m-0">Nazarene<span class="text-white">Church</span></h1>
@@ -63,9 +70,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-
-
-</div>
+           </div>
 
             <a href="index.html" class="navbar-brand d-none d-lg-block mx-auto text-center">
                 <img src="img/Nazarene_logo.png" alt="Logo" style="height: 90px;">
@@ -83,8 +88,8 @@
                         <div class="dropdown-menu m-0">	
                             <a href="books.html" class="dropdown-item">الكتب </a>							
                             <a href="faith.html" class="dropdown-item">بنود الايمان</a>							
-                            <a href="basics.html" class="dropdown-item">أساسيات كنيسة الناصري</a>					
-                            <a href="service.html" class="dropdown-item">دستور كنيسة الناصري</a>	
+                            <a href="basics.html" class="dropdown-item">اساسيات الكنيسة</a>					
+                            <a href="service.html" class="dropdown-item">دستور الكنيسة</a>	
 
                        </div>
                     </div>
@@ -100,204 +105,213 @@
     <!-- Navbar End -->
 
 
-
 <br><br><br><br><br><br>
 
-<!-- Book Library Section -->
-<section class="container py-5">
-    <div class="text-center mb-5">
-        <h2 class="fw-bold">مكتبة كنيسة الناصري الانجيلية</h2>
-        <p class="text-muted">تصفح مجموعة من الكتب المتوفرة</p>
+
+
+<!-- Book Library Section Start -->
+
+
+<div class="container-xxl py-5 bg-light">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3 small fw-bold">مكتبة كنيسة الناصري</div>
+            <h2 class="mb-4">كتب مختارة</h2>
+            
+            <div class="position-relative w-75 mx-auto mb-4">
+                <input class="form-control bg-white border-0 py-3 ps-4 pe-5 shadow-sm" type="text" id="bookSearch" placeholder="ابحث في كنوزنا الروحية..." style="border-radius: 30px;">
+                <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-1 me-2" style="border-radius: 30px;"><i class="fa fa-search"></i></button>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4" id="filter-buttons">
+                <button class="btn btn-outline-primary btn-sm rounded-pill px-4 active" data-filter="all">الكل</button>
+                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="لاهوت">لاهوت</button>
+                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="تاريخ">تاريخ</button>
+                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="روحيات">روحيات</button>
+                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="دراسات">دراسات</button>
+                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="شباب">شباب</button>
+            </div>
+        </div>
+
+        <div class="row g-3" id="books-container">
+            
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="لاهوت" data-wow-delay="0.1s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/book1.jpg" alt="العقيدة المسيحية">
+                        <div class="book-hover-actions">
+                            <a href="pdf/book1.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1" title="قراءة"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">العقيدة المسيحية</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">لاهوت</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="تاريخ" data-wow-delay="0.15s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/book2.jpg" alt="تاريخ كنيسة الناصري">
+                        <div class="book-hover-actions">
+                            <a href="pdf/book2.pdf" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">تاريخ كنيسة الناصري</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">تاريخ</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="روحيات" data-wow-delay="0.2s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/book3.jpg" alt="قوة الصلاة">
+                        <div class="book-hover-actions"><a href="pdf/book3.pdf" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">قوة الصلاة</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">روحيات</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="دراسات" data-wow-delay="0.25s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/book4.jpg" alt="دراسات في العهد الجديد">
+                        <div class="book-hover-actions"><a href="pdf/book4.pdf" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">دراسات في العهد الجديد</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">دراسات</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="شباب" data-wow-delay="0.3s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/book5.jpg" alt="تحديات جيل اليوم">
+                        <div class="book-hover-actions"><a href="pdf/book5.pdf" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">تحديات جيل اليوم</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">شباب</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="لاهوت" data-wow-delay="0.35s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper"><img class="img-fluid" src="img/book6.jpg" alt="لاهوت القداسة"><div class="book-hover-actions"><a href="#" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div></div>
+                    <div class="p-2 text-center"><h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">لاهوت القداسة</h6><small class="text-muted d-block" style="font-size: 0.7rem;">لاهوت</small></div>
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="روحيات" data-wow-delay="0.4s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper"><img class="img-fluid" src="img/book7.jpg" alt="ثمار الروح"><div class="book-hover-actions"><a href="#" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div></div>
+                    <div class="p-2 text-center"><h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">ثمار الروح القدس</h6><small class="text-muted d-block" style="font-size: 0.7rem;">روحيات</small></div>
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="تاريخ" data-wow-delay="0.45s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper"><img class="img-fluid" src="img/book8.jpg" alt="رواد الإيمان"><div class="book-hover-actions"><a href="#" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div></div>
+                    <div class="p-2 text-center"><h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">رواد الإيمان</h6><small class="text-muted d-block" style="font-size: 0.7rem;">تاريخ</small></div>
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="دراسات" data-wow-delay="0.5s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper"><img class="img-fluid" src="img/book9.jpg" alt="تفسير المزامير"><div class="book-hover-actions"><a href="#" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div></div>
+                    <div class="p-2 text-center"><h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">تفسير المزامير</h6><small class="text-muted d-block" style="font-size: 0.7rem;">دراسات</small></div>
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="شباب" data-wow-delay="0.55s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper"><img class="img-fluid" src="img/book10.jpg" alt="خطوة بخطوة"><div class="book-hover-actions"><a href="#" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div></div>
+                    <div class="p-2 text-center"><h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">خطوة بخطوة مع المسيح</h6><small class="text-muted d-block" style="font-size: 0.7rem;">شباب</small></div>
+                </div>
+            </div>
+
+        </div>
     </div>
+</div>
 
-    <div class="row g-4">
+<style>
+    .book-card-mini { border-radius: 12px; overflow: hidden; transition: 0.4s; border: 1px solid #eef0f2; }
+    .book-card-mini:hover { transform: translateY(-7px); box-shadow: 0 12px 25px rgba(0,0,0,0.1) !important; }
+    .book-img-wrapper { position: relative; aspect-ratio: 2/3; background: #f8f9fa; overflow: hidden; }
+    .book-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+    .book-hover-actions { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 107, 107, 0.45); display: flex; align-items: center; justify-content: center; opacity: 0; transition: 0.3s; }
+    .book-card-mini:hover .book-hover-actions { opacity: 1; }
+    .btn-outline-primary.active { background-color: #006b6b; color: white; border-color: #006b6b; }
+    #bookSearch:focus { border: 1px solid #006b6b; box-shadow: 0 0 10px rgba(0,107,107,0.1); }
+</style>
 
-        <!-- Book 1 -->
-        <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-            <a href="books/holly-bible.pdf" target="_blank">
-            <img src="img/book1.jpg" class="card-img-top book-cover" alt="Book 1"></a>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">الكتاب المقدس</h5>
-                </div>
-            </div>
-        </div>
-		
-<!-- Book 1 -->
-        <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-            <a href="books/book1.pdf" target="_blank">
-            <img src="img/book1.jpg" class="card-img-top book-cover" alt="Book 1"></a>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">الكتاب المقدس</h5>
-                </div>
-            </div>
-        </div>
-		
-		<!-- Book 1 -->
-        <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-            <a href="books/book1.pdf" target="_blank">
-            <img src="img/book1.jpg" class="card-img-top book-cover" alt="Book 1"></a>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">الكتاب المقدس</h5>
-                </div>
-            </div>
-        </div>
-		
-		<!-- Book 1 -->
-        <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-            <a href="books/book1.pdf" target="_blank">
-            <img src="img/book1.jpg" class="card-img-top book-cover" alt="Book 1"></a>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">الكتاب المقدس</h5>
-                </div>
-            </div>
-        </div>
-		
-        <!-- Book 1 -->
-        <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-            <a href="books/book1.pdf" target="_blank">
-            <img src="img/book1.jpg" class="card-img-top book-cover" alt="Book 1"></a>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">الكتاب المقدس</h5>
-                </div>
-            </div>
-        </div>
-		
-		<!-- Book 1 -->
-        <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-            <a href="books/book1.pdf" target="_blank">
-            <img src="img/book1.jpg" class="card-img-top book-cover" alt="Book 1"></a>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">الكتاب المقدس</h5>
-                </div>
-            </div>
-        </div>
-		
-		<!-- Book 1 -->
-        <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-            <a href="books/book1.pdf" target="_blank">
-            <img src="img/book1.jpg" class="card-img-top book-cover" alt="Book 1"></a>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">الكتاب المقدس</h5>
-                </div>
-            </div>
-        </div>
-		
-		<!-- Book 1 -->
-        <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-            <a href="books/book1.pdf" target="_blank">
-            <img src="img/book1.jpg" class="card-img-top book-cover" alt="Book 1"></a>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">الكتاب المقدس</h5>
-                </div>
-            </div>
-        </div>
-		
-		<!-- Book 1 -->
-        <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-            <a href="books/book1.pdf" target="_blank">
-            <img src="img/book1.jpg" class="card-img-top book-cover" alt="Book 1"></a>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">الكتاب المقدس</h5>
-                </div>
-            </div>
-        </div>
-      
-	  <!-- Book 1 -->
-        <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-            <a href="books/book1.pdf" target="_blank">
-            <img src="img/book1.jpg" class="card-img-top book-cover" alt="Book 1"></a>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">الكتاب المقدس</h5>
-                </div>
-            </div>
-        </div>
-      
-	  <!-- Book 1 -->
-        <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-            <a href="books/book1.pdf" target="_blank">
-            <img src="img/book1.jpg" class="card-img-top book-cover" alt="Book 1"></a>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">الكتاب المقدس</h5>
-                </div>
-            </div>
-        </div>
-      
-	  
-	  <!-- Book 1 -->
-        <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-            <a href="books/book1.pdf" target="_blank">
-            <img src="img/book1.jpg" class="card-img-top book-cover" alt="Book 1"></a>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">الكتاب المقدس</h5>
-                </div>
-            </div>
-        </div>
-      
-	  
-	  <!-- Book 1 -->
-        <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-            <a href="books/book1.pdf" target="_blank">
-            <img src="img/book1.jpg" class="card-img-top book-cover" alt="Book 1"></a>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">الكتاب المقدس</h5>
-                </div>
-            </div>
-        </div>
-      
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('bookSearch');
+    const filterButtons = document.querySelectorAll('#filter-buttons button');
+    const bookItems = document.querySelectorAll('.book-item');
 
-    </div>
-</section>
+    searchInput.addEventListener('keyup', function() {
+        const query = searchInput.value.toLowerCase();
+        bookItems.forEach(item => {
+            const title = item.querySelector('.book-title').innerText.toLowerCase();
+            item.style.display = title.includes(query) ? "block" : "none";
+        });
+    });
 
-        
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            const filterValue = this.getAttribute('data-filter');
+            bookItems.forEach(item => {
+                item.style.display = (filterValue === 'all' || item.getAttribute('data-category') === filterValue) ? "block" : "none";
+            });
+        });
+    });
+});
+</script>
+
+<!-- Book Library Section End -->
+
+
+
 
   
     <!-- Footer Start -->
-   <div class="container-fluid bg-dark text-white-50 footer mt-2 pt-2 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-3">
-        <div class="row g-5">
-            <div class="col-lg-4 col-md-6">
-                <h1 class="fw-bold text-primary mb-4 fs-3">Nazarene<span class="text-white">Church</span> </h1>
-                <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
+ <div class="container-fluid bg-dark text-white-50 footer mt-2 pt-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-2"> 
+        <div class="row g-4"> 
+            <div class="col-md-6">
+                <h1 class="fw-bold text-primary mb-2 fs-4">Nazarene<span class="text-white">Church</span></h1> 
+                <p class="small mb-0">أَنَا هُوَ الطَّرِيقُ وَالْحَقُّ وَالْحَيَاةُ. لَيْسَ أَحَدٌ يَأْتِي إِلَى الآبِ إِلاَّ بِي (يو 14: 6)</p>
             </div>
 
-            <div class="col-lg-4 col-md-6">
-                <h5 class="text-light mb-4">العنوان</h5>
-                <p><i class="fa fa-map-marker-alt me-3"></i>Duhok, IRAQ</p>
-                <p><i class="fa fa-phone-alt me-3"></i>+964 750 186 4942</p>
-                <p><i class="fa fa-envelope me-3"></i>firas.nazarene@yahoo.com</p>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <h5 class="text-light mb-4">روابط سريعة</h5>
-                <a class="btn btn-link" href="about.html">من نحن</a>
-                <a class="btn btn-link" href="holly-bible.html">الكتاب المقدس</a>
-                <a class="btn btn-link" href="basics.html">أساسيات الكنيسة</a>
-                <a class="btn btn-link" href="faith.html">بنود الايمان</a>
-                <a class="btn btn-link" href="contact.html">أتصل بنا</a>
+            <div class="col-md-6">
+                <h5 class="text-light mb-2">اتصل بنا</h5> 
+                <p class="mb-1 small"><i class="fa fa-map-marker-alt me-3"></i>Duhok, IRAQ</p> 
+                <p class="mb-1 small"><i class="fa fa-phone-alt me-3"></i>+964 750 186 4942</p>
+                <p class="mb-0 small"><i class="fa fa-envelope me-3"></i>firas.nazarene@yahoo.com</p>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid copyright">
+    <div class="container-fluid copyright py-2 border-top border-secondary mt-3"> 
         <div class="container">
             <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <div class="col-md-6 text-center text-md-start mb-1 mb-md-0 small">
                     &copy; <a href="#">Nazarene Church</a>, All Right Reserved 2026.
                 </div>
-                <div class="col-md-6 text-center text-md-end">
+                <div class="col-md-6 text-center text-md-end small">
                     Designed By <a href="https://kaznakhaya.site/">Kaznakhaya</a>
                 </div>
             </div>
