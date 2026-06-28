@@ -561,4 +561,92 @@
 
 .footer .copyright {
     padding: 15px 0 !important; /* تقليل ارتفاع شريط الحقوق السفلي */
+	
+	
+	
+}
+
+
+/* مسافة آمنة تحت الهيدر الثابت */
+body {
+    padding-top: 60px;
+}
+
+/* تصغير المسافة قليلاً في الموبايل */
+@media (max-width: 768px) {
+    body {
+        padding-top: 90px;
+    }
+}
+.activities-wrapper{
+    position:relative !important;
+}
+
+.activity-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#f39c12;
+    color:#fff;
+    font-size:22px;
+    z-index:9999;
+    cursor:pointer;
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+}
+
+.activity-prev{
+    right:10px;
+}
+
+.activity-next{
+    left:10px;
+}
+
+.activity-arrow:hover{
+    background:#333;
+}
+
+/* تحديد تموضع سهم اليمين الكبير للأخبار */
+.news-custom-prev {
+    right: 0; 
+}
+
+/* تحديد تموضع سهم اليسار الكبير للأخبار */
+.news-custom-next {
+    left: 0; 
+}
+
+/* إخفاء الأسهم الصغيرة الافتراضية نهائياً لكي لا تشوه المنظر */
+.news-slider-carousel .owl-nav {
+    display: none !important;
+}
+
+
+/* --- 1) الشكل الافتراضي لكروت الأخبار (الغير نشطة في الأطراف) --- */
+.news-slider-carousel .activity-card-item {
+    transform: scale(0.85); /* تصغير الكروت الجانبية قليلاً */
+    opacity: 0.5;           /* جعل الكروت الجانبية باهتة بنسبة 50% */
+    transition: all 0.5s ease; /* حركة سلسة جداً أثناء الانتقال */
+    box-shadow: none;
+}
+
+/* --- 2) الشكل الخاص بالخبر النشط والفعال (الموجود في المنتصف تماماً) --- */
+.news-slider-carousel .owl-item.center .activity-card-item {
+    transform: scale(1.05); /* تكبير كرت المنتصف ليكون بارزاً */
+    opacity: 1;             /* إظهار الألوان كاملة وبوضوح 100% */
+    box-shadow: 0 10px 30px rgba(255, 111, 15, 0.2); /* إضافة ظل برتقالي ناعم حوله */
+}
+
+/* --- 3) تغيير لون زر "المزيد من التفاصيل" أو العناوين داخل كرت المنتصف فقط (اختياري) --- */
+.news-slider-carousel .owl-item.center .btn-more-details {
+    background-color: var(--primary); /* تلوين زر الكرت النشط بالبرتقالي */
+    color: #ffffff !important;
+}
+
+.news-slider-carousel .owl-item.center h5 {
+    color: var(--primary) !important; /* تلوين عنوان الخبر النشط */
 }
