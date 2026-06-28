@@ -77,7 +77,39 @@
             }
         }
     });
+$(document).ready(function() {
+   // ==========================================
+// الإجبار اليدوي لكاروسيل الأخبار للتحرك من اليمين لليسار
+// ==========================================
+var newsCarousel = $(".news-slider-carousel").owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 4000, 
+    smartSpeed: 1000,
+    center: true,          
+    dots: true,
+    loop: true,
+    margin: 0,
+    rtl: false, 
+    nav: false,            
+    slideBy: 1,            // ⭐ السر هنا: يجبر الكاروسيل على تحريك عنصر واحد فقط في كل سحبة
+    responsive: {
+        0: { items: 1, center: false },
+        768: { items: 2, center: false },
+        992: { items: 3 }
+    }
+});
 
+/* عكس وظائف الأسهم الكبيرة يدوياً لإجبار الحركة من اليمين لليسار */
+
+    $(document).on('click', '.news-custom-prev', function(e) {
+    e.preventDefault();
+    newsCarousel.trigger('next.owl.carousel');
+});
+    
+    $('.news-custom-next').click(function() {
+        newsCarousel.trigger('prev.owl.carousel');
+    });
+});
     
 })(jQuery);
 
