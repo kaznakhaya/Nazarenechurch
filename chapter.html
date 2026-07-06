@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <title>قراءة الكتاب المقدس - Nazarene Church</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #f8f9fa; }
+        .chapter-container { max-width: 800px; margin: 120px auto 60px auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .verse { font-size: 21px; line-height: 2.1; margin-bottom: 15px; text-align: justify; color: #222; }
+        .verse-num { color: #b22222; font-weight: bold; margin-left: 8px; font-size: 16px; }
+    </style>
+</head>
+<body dir="rtl">
+
+    <!-- زر العودة للفهرس -->
+    <div class="container mt-4">
+        <a href="holly-bible.html" class="btn btn-primary shadow-sm"> العودة إلى الفهرس</a>
+    </div>
+
+    <!-- حاوية عرض النص المباشر -->
+    <div class="container">
+        <div class="chapter-container">
+            <h2 id="book-title" class="text-center text-primary fw-bold mb-2">اسم السفر</h2>
+            <h4 id="chapter-title" class="text-center text-muted mb-4">الإصحاح</h4>
+            <hr>
+            <div id="chapter-text" class="pt-2">
+                <!-- جلب آيات الملفات المحلية المحملة -->
+            </div>
+        </div>
+    </div>
+
+ <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const bookId = urlParams.get('book');
+    const bookName = urlParams.get('name');
+    const chapterNum = urlParams.get('ch');
+
+    if(bookId && chapterNum) {
+        document.getElementById('book-title').innerText = bookName;
+        document.getElementById('chapter-title').innerText = `الإصحاح ${chapterNum}`;
+
+        // استخدام iframe مخفي لقراءة الملف المحلي وتخطي حظر CORS للمتصفح تماماً
+        const iframe = document.createElement('iframe');
+        iframe.style.display = 'none';
+        iframe.src = `bible_text/${bookId}/${chapterNum}.json`;
+        document.body.appendChild(iframe);
+
+        iframe.onload = function() {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const jsonText = doc.body.textContent || doc.body.innerText;
+                const data = JSON.parse(jsonText);
+                
+                let htmlContent = "";
+                const verses = data.verses || data;
+                
+                if (Array.isArray(verses)) {
+                    verses.forEach((v) => {
+                        const text = v.text || v;
+                        const num = v.verse || (verses.indexOf(v) + 1);
+                        htmlContent += `<p class="verse"><span class="verse-num">(${num})</span> ${text}</p>`;
+                    });
+                } else if (typeof verses === 'object') {
+                    Object.keys(verses).forEach(vNum => {
+                        htmlContent += `<p class="verse"><span class="verse-num">(${vNum})</span> ${verses[vNum]}</p>`;
+                    });
+                }
+                document.getElementById('chapter-text').innerHTML = htmlContent;
+            } catch (e) {
+                // إذا فشلت الطريقة البديلة أيضاً في بعض المتصفحات المتشددة أمنياً
+                document.getElementById('chapter-text').innerHTML = `
+                    <div class="alert alert-warning text-center">
+                        <h5>تنبيه أمني من المتصفح (CORS Policy)</h5>
+                        <p>يرجى تشغيل المشروع عبر <strong>Live Server</strong> داخل VS Code لكي يسمح المتصفح بعرض الآيات محلياً.</p>
+                    </div>`;
+            }
+            document.body.removeChild(iframe);
+        };
+    }
+</script>
+</body>
+</html>
