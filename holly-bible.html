@@ -131,6 +131,26 @@
         </div>
     </div>
 </div>
+<!-- يمكنك إضافة هذا التنسيق البسيط داخل وسم <style> في أعلى الصفحة لجعل الأسفار تبدو كأزرار أنيقة وقابلة للنقر -->
+<style>
+    .book-toggle-btn {
+        cursor: pointer;
+        padding: 8px 12px;
+        background-color: #f8f9fa;
+        border-radius: 6px;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+        border: 1px solid #e9ecef;
+    }
+    .book-toggle-btn:hover {
+        background-color: #e2e6ea;
+        transform: translateX(-2px); /* حركة خفيفة لليمين تعطي إيحاء بالتفاعل */
+    }
+    .chapters-wrapper {
+        display: none; /* إخفاء الإصحاحات افتراضياً */
+        padding-right: 15px; /* إزاحة خفيفة للإصحاحات لتبدو تابعة للسفر */
+    }
+</style>
+
 <!-- Bible Index Section End -->
 
 <script>
@@ -177,14 +197,43 @@ const newTestament = [
     function buildBibleIndex(testamentArray, containerId) {
         const container = document.getElementById(containerId);
         let contentHTML = "";
+        
         testamentArray.forEach((book, index) => {
-            contentHTML += `<div class="bible-book mb-4"><h6 class="text-primary fw-bold mb-2">${index + 1}. ${book.name}</h6><div class="d-flex flex-wrap gap-1">`;
+            // معرف فريد لكل سفر للتحكم في فتح وإغلاق إصحاحاته
+            const wrapperId = `chapters-${containerId}-${index}`;
+            
+            contentHTML += `
+                <div class="bible-book mb-3">
+                    <!-- عنوان السفر يعمل كـ زر للتأرجح -->
+                    <div class="book-toggle-btn d-flex justify-content-between align-items-center" onclick="toggleChapters('${wrapperId}')">
+                        <h6 class="text-primary fw-bold mb-0">${index + 1}. ${book.name}</h6>
+                        <small class="text-muted">(${book.chapters} إصحاح) ▾</small>
+                    </div>
+                    
+                    <!-- حاوية أرقام الإصحاحات (مخفية افتراضياً) -->
+                    <div id="${wrapperId}" class="chapters-wrapper mt-2">
+                        <div class="d-flex flex-wrap gap-1 bg-white p-2 border rounded shadow-sm">`;
+                        
             for (let i = 1; i <= book.chapters; i++) {
-                contentHTML += `<a href="chapter.html?book=${book.id}&name=${encodeURIComponent(book.name)}&ch=${i}" class="btn btn-sm btn-outline-dark text-dark py-0 px-1" style="min-width: 35px; border-color: #dee2e6;">${i}</a>`;
+                contentHTML += `<a href="chapter.html?book=${book.id}&name=${encodeURIComponent(book.name)}&ch=${i}" class="btn btn-sm btn-outline-dark text-dark py-1 px-2" style="min-width: 35px; border-color: #dee2e6;">${i}</a>`;
             }
-            contentHTML += `</div></div>`;
+            
+            contentHTML += `
+                        </div>
+                    </div>
+                </div>`;
         });
         container.innerHTML = contentHTML;
+    }
+
+    // دالة فتح وإغلاق قائمة الإصحاحات بسلاسة
+    function toggleChapters(wrapperId) {
+        const element = document.getElementById(wrapperId);
+        if (element.style.display === "block") {
+            element.style.display = "none";
+        } else {
+            element.style.display = "block";
+        }
     }
 
     document.addEventListener("DOMContentLoaded", function() {
