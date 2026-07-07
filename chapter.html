@@ -43,18 +43,15 @@
         document.getElementById('book-title').innerText = bookName;
         document.getElementById('chapter-title').innerText = `الإصحاح ${chapterNum}`;
 
-        // استخدام iframe مخفي لقراءة الملف المحلي وتخطي حظر CORS للمتصفح تماماً
-        const iframe = document.createElement('iframe');
-        iframe.style.display = 'none';
-        iframe.src = `bible_text/${bookId}/${chapterNum}.json`;
-        document.body.appendChild(iframe);
-
-        iframe.onload = function() {
-            try {
-                const doc = iframe.contentDocument || iframe.contentWindow.document;
-                const jsonText = doc.body.textContent || doc.body.innerText;
-                const data = JSON.parse(jsonText);
-                
+        // استخدام fetch القياسية المناسبة للسيرفرات والمواقع المرفوعة
+        fetch(`bible_text/${bookId}/${chapterNum}.json`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('لم يتم العثور على ملف الآيات، تأكد من حالة الأحرف في أسماء المجلدات');
+                }
+                return response.json();
+            })
+            .then(data => {
                 let htmlContent = "";
                 const verses = data.verses || data;
                 
@@ -70,16 +67,15 @@
                     });
                 }
                 document.getElementById('chapter-text').innerHTML = htmlContent;
-            } catch (e) {
-                // إذا فشلت الطريقة البديلة أيضاً في بعض المتصفحات المتشددة أمنياً
+            })
+            .catch(error => {
+                console.error(error);
                 document.getElementById('chapter-text').innerHTML = `
-                    <div class="alert alert-warning text-center">
-                        <h5>تنبيه أمني من المتصفح (CORS Policy)</h5>
-                        <p>يرجى تشغيل المشروع عبر <strong>Live Server</strong> داخل VS Code لكي يسمح المتصفح بعرض الآيات محلياً.</p>
+                    <div class="alert alert-danger text-center">
+                        <h5>خطأ في تحميل الآيات</h5>
+                        <p>تأكد من رفع مجلد <code>bible_text</code> وملفات الـ JSON بشكل صحيح إلى مستودع GitHub، ومطابقة حالة الحروف (Capital/Small).</p>
                     </div>`;
-            }
-            document.body.removeChild(iframe);
-        };
+            });
     }
 </script>
 </body>
