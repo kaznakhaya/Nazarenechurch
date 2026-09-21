@@ -84,9 +84,9 @@
 
                    <a href="contact.html" class="nav-item nav-link">تواصل معنا</a>
 <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">الصفحات</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">دليل الكنيسة</a>
                         <div class="dropdown-menu m-0">	
-                            <a href="books.html" class="dropdown-item">الكتب </a>							
+					
                             <a href="faith.html" class="dropdown-item">بنود الايمان</a>							
                             <a href="basics.html" class="dropdown-item">اساسيات الكنيسة</a>					
                             <a href="service.html" class="dropdown-item">دستور الكنيسة</a>	
@@ -111,7 +111,6 @@
 
 <!-- Book Library Section Start -->
 
-
 <div class="container-xxl py-5 bg-light">
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
@@ -124,118 +123,462 @@
             </div>
 
             <div class="d-flex flex-wrap justify-content-center gap-2 mb-4" id="filter-buttons">
+                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="قيادة">قيادة وخدمة</button>
+                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="دراسات">دراسات وتفاسير</button>
+                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="روحيات">روحيات وخلاص</button>
+                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="تاريخ">تاريخ وكنيسة</button>
+                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="لاهوت">لاهوت ودفاعيات</button>               
                 <button class="btn btn-outline-primary btn-sm rounded-pill px-4 active" data-filter="all">الكل</button>
-                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="لاهوت">لاهوت</button>
-                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="تاريخ">تاريخ</button>
-                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="روحيات">روحيات</button>
-                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="دراسات">دراسات</button>
-                <button class="btn btn-outline-primary btn-sm rounded-pill px-4" data-filter="شباب">شباب</button>
             </div>
         </div>
 
         <div class="row g-3" id="books-container">
             
-            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="لاهوت" data-wow-delay="0.1s">
+            <!-- 1. قيادة -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="قيادة" data-wow-delay="0.05s">
                 <div class="book-card-mini shadow-sm bg-white h-100">
                     <div class="book-img-wrapper">
-                        <img class="img-fluid" src="img/book1.jpg" alt="العقيدة المسيحية">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="أساسيات القيادة ـ جون سي ماكسويل">
                         <div class="book-hover-actions">
-                            <a href="pdf/book1.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1" title="قراءة"><i class="fa fa-eye text-primary"></i></a>
+                            <a href="books/أساسيات القيادة ـ جون سي ماكسويل.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
                         </div>
                     </div>
                     <div class="p-2 text-center">
-                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">العقيدة المسيحية</h6>
-                        <small class="text-muted d-block" style="font-size: 0.7rem;">لاهوت</small>
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="أساسيات القيادة">أساسيات القيادة</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">جون سي ماكسويل</small>
                     </div>
                 </div>
             </div>
 
-            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="تاريخ" data-wow-delay="0.15s">
+            <!-- 2. دراسات -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="دراسات" data-wow-delay="0.05s">
                 <div class="book-card-mini shadow-sm bg-white h-100">
                     <div class="book-img-wrapper">
-                        <img class="img-fluid" src="img/book2.jpg" alt="تاريخ كنيسة الناصري">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="أصالة وقانونية خاتمة إنجيل مرقس">
                         <div class="book-hover-actions">
-                            <a href="pdf/book2.pdf" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                            <a href="books/أصالة وقانونية خاتمة إنجيل مرقس مرجان ناشد مرجان.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
                         </div>
                     </div>
                     <div class="p-2 text-center">
-                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">تاريخ كنيسة الناصري</h6>
-                        <small class="text-muted d-block" style="font-size: 0.7rem;">تاريخ</small>
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="أصالة وقانونية خاتمة مرقس">خاتمة إنجيل مرقس</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">مرجان ناشد مرجان</small>
                     </div>
                 </div>
             </div>
 
-            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="روحيات" data-wow-delay="0.2s">
+            <!-- 3. تاريخ -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="تاريخ" data-wow-delay="0.05s">
                 <div class="book-card-mini shadow-sm bg-white h-100">
                     <div class="book-img-wrapper">
-                        <img class="img-fluid" src="img/book3.jpg" alt="قوة الصلاة">
-                        <div class="book-hover-actions"><a href="pdf/book3.pdf" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div>
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="الاصلاح الانجيلي و الحرية الدينية غسان خلف">
+                        <div class="book-hover-actions">
+                            <a href="books/الاصلاح الانجيلي و الحرية الدينية غسان خلف.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
                     </div>
                     <div class="p-2 text-center">
-                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">قوة الصلاة</h6>
-                        <small class="text-muted d-block" style="font-size: 0.7rem;">روحيات</small>
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="الإصلاح الإنجيلي والحرية الدينية">الإصلاح والحرية الدينية</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">غسان خلف</small>
                     </div>
                 </div>
             </div>
 
-            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="دراسات" data-wow-delay="0.25s">
+            <!-- 4. لاهوت -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="لاهوت" data-wow-delay="0.05s">
                 <div class="book-card-mini shadow-sm bg-white h-100">
                     <div class="book-img-wrapper">
-                        <img class="img-fluid" src="img/book4.jpg" alt="دراسات في العهد الجديد">
-                        <div class="book-hover-actions"><a href="pdf/book4.pdf" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div>
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="الإنسان">
+                        <div class="book-hover-actions">
+                            <a href="books/الإنسان.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
                     </div>
                     <div class="p-2 text-center">
-                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">دراسات في العهد الجديد</h6>
-                        <small class="text-muted d-block" style="font-size: 0.7rem;">دراسات</small>
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="الإنسان">الإنسان</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">دراسة لاهوتية</small>
                     </div>
                 </div>
             </div>
 
-            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="شباب" data-wow-delay="0.3s">
+            <!-- 5. دراسات -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="دراسات" data-wow-delay="0.05s">
                 <div class="book-card-mini shadow-sm bg-white h-100">
                     <div class="book-img-wrapper">
-                        <img class="img-fluid" src="img/book5.jpg" alt="تحديات جيل اليوم">
-                        <div class="book-hover-actions"><a href="pdf/book5.pdf" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div>
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="التفسير الحديث للكتاب المقدس بطرس الأولى">
+                        <div class="book-hover-actions">
+                            <a href="books/التفسير الحديث للكتاب المقدس بطرس الأولى.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
                     </div>
                     <div class="p-2 text-center">
-                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">تحديات جيل اليوم</h6>
-                        <small class="text-muted d-block" style="font-size: 0.7rem;">شباب</small>
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="التفسير الحديث: بطرس الأولى">التفسير الحديث: بطرس 1</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">تفسير كتابي</small>
                     </div>
                 </div>
             </div>
 
-            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="لاهوت" data-wow-delay="0.35s">
+            <!-- 6. دراسات -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="دراسات" data-wow-delay="0.05s">
                 <div class="book-card-mini shadow-sm bg-white h-100">
-                    <div class="book-img-wrapper"><img class="img-fluid" src="img/book6.jpg" alt="لاهوت القداسة"><div class="book-hover-actions"><a href="#" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div></div>
-                    <div class="p-2 text-center"><h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">لاهوت القداسة</h6><small class="text-muted d-block" style="font-size: 0.7rem;">لاهوت</small></div>
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="التفسير الحديث للكتاب المقدس تكوين">
+                        <div class="book-hover-actions">
+                            <a href="books/التفسير الحديث للكتاب المقدس تكوين.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="التفسير الحديث: تكوين">التفسير الحديث: تكوين</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">تفسير كتابي</small>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="روحيات" data-wow-delay="0.4s">
+            <!-- 7. دراسات -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="دراسات" data-wow-delay="0.05s">
                 <div class="book-card-mini shadow-sm bg-white h-100">
-                    <div class="book-img-wrapper"><img class="img-fluid" src="img/book7.jpg" alt="ثمار الروح"><div class="book-hover-actions"><a href="#" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div></div>
-                    <div class="p-2 text-center"><h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">ثمار الروح القدس</h6><small class="text-muted d-block" style="font-size: 0.7rem;">روحيات</small></div>
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="التفسير الحديث للكتاب المقدس رؤيا يوحنا">
+                        <div class="book-hover-actions">
+                            <a href="books/التفسير الحديث للكتاب المقدس رؤيا يوحنا.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="التفسير الحديث: رؤيا يوحنا">التفسير الحديث: رؤيا</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">تفسير كتابي</small>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="تاريخ" data-wow-delay="0.45s">
+            <!-- 8. دراسات -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="دراسات" data-wow-delay="0.05s">
                 <div class="book-card-mini shadow-sm bg-white h-100">
-                    <div class="book-img-wrapper"><img class="img-fluid" src="img/book8.jpg" alt="رواد الإيمان"><div class="book-hover-actions"><a href="#" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div></div>
-                    <div class="p-2 text-center"><h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">رواد الإيمان</h6><small class="text-muted d-block" style="font-size: 0.7rem;">تاريخ</small></div>
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="التكوين بدايات الزمان والمكان والإنسان هاني ظريف">
+                        <div class="book-hover-actions">
+                            <a href="books/التكوين  بدايات الزمان والمكان والإنسان هاني ظريف.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="التكوين بدايات الزمان والمكان">التكوين بدايات الزمان</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">هاني ظريف</small>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="دراسات" data-wow-delay="0.5s">
+            <!-- 9. روحيات -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="روحيات" data-wow-delay="0.05s">
                 <div class="book-card-mini shadow-sm bg-white h-100">
-                    <div class="book-img-wrapper"><img class="img-fluid" src="img/book9.jpg" alt="تفسير المزامير"><div class="book-hover-actions"><a href="#" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div></div>
-                    <div class="p-2 text-center"><h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">تفسير المزامير</h6><small class="text-muted d-block" style="font-size: 0.7rem;">دراسات</small></div>
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="الحرب الروحية دين شيرمان">
+                        <div class="book-hover-actions">
+                            <a href="books/الحرب الروحية دين شيرمان.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="الحرب الروحية">الحرب الروحية</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">دين شيرمان</small>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="شباب" data-wow-delay="0.55s">
+            <!-- 10. لاهوت -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="لاهوت" data-wow-delay="0.05s">
                 <div class="book-card-mini shadow-sm bg-white h-100">
-                    <div class="book-img-wrapper"><img class="img-fluid" src="img/book10.jpg" alt="خطوة بخطوة"><div class="book-hover-actions"><a href="#" class="btn btn-sm btn-light rounded-circle m-1"><i class="fa fa-eye text-primary"></i></a></div></div>
-                    <div class="p-2 text-center"><h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;">خطوة بخطوة مع المسيح</h6><small class="text-muted d-block" style="font-size: 0.7rem;">شباب</small></div>
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="الخطية">
+                        <div class="book-hover-actions">
+                            <a href="books/الخطية.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="الخطية">الخطية</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">دراسة عقائدية</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. روحيات -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="روحيات" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="الخلاص">
+                        <div class="book-hover-actions">
+                            <a href="books/الخلاص.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="الخلاص">الخلاص</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">دراسة كتابية</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. روحيات -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="روحيات" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="الروح القدس محبوبي اندريس بيسوني">
+                        <div class="book-hover-actions">
+                            <a href="books/الروح القدس محبوبي اندريس بيسوني.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="الروح القدس محبوبي">الروح القدس محبوبي</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">اندريس بيسوني</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 13. لاهوت -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="لاهوت" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="الصوفية الأخ رشيد">
+                        <div class="book-hover-actions">
+                            <a href="books/الصوفية الأخ رشيد.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="الصوفية">الصوفية</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">الأخ رشيد</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 14. لاهوت -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="لاهوت" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="الفداء و الخلاص و الكفارة">
+                        <div class="book-hover-actions">
+                            <a href="books/الفداء-و-الخلاص-و-الكفارة   .pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="الفداء والخلاص والكفارة">الفداء والخلاص والكفارة</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">لاهوت عقيدي</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 15. تاريخ -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="تاريخ" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="الكنيسة دستور">
+                        <div class="book-hover-actions">
+                            <a href="books/الكنيسة دستور.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="دستور الكنيسة">دستور الكنيسة</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">نظم كنسية</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 16. دراسات -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="دراسات" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="المدخل الي عبرية العهد القديم">
+                        <div class="book-hover-actions">
+                            <a href="books/المدخل الي عبرية العهد القديم نحو ونصوص عمر عبد الجليل و احمد هويدي.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="المدخل إلى عبرية العهد القديم">عبرية العهد القديم</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">عمر عبد الجليل وأحمد هويدي</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 17. لاهوت -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="لاهوت" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="بدعة لاهوت المحبة الحر">
+                        <div class="book-hover-actions">
+                            <a href="books/بدعة-لاهوت-المحبة-الحر.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="بدعة لاهوت المحبة الحر">لاهوت المحبة الحر</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">ردود ودفاعيات</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 18. روحيات -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="روحيات" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="بقية الخلاص">
+                        <div class="book-hover-actions">
+                            <a href="books/بقية الخلاص.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="بقية الخلاص">بقية الخلاص</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">دراسة روحية</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 19. قيادة -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="قيادة" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="حياة الخادم والخدمة البابا شنودة">
+                        <div class="book-hover-actions">
+                            <a href="books/حياة الخادم والخدمة البابا شنودة.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="حياة الخادم والخدمة">حياة الخادم والخدمة</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">البابا شنودة الثالث</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 20. دراسات -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="دراسات" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="خاتمة مرقس بين النقد و دحض النقد">
+                        <div class="book-hover-actions">
+                            <a href="books/خاتمة مرقس بين النقد و دحض النقد فادي اليكساندر.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="خاتمة مرقس بين النقد ودحض النقد">نقد خاتمة مرقس</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">فادي أليكساندر</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 21. روحيات -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="روحيات" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="رسائل في الحياة الجديدة">
+                        <div class="book-hover-actions">
+                            <a href="books/رسائل في الحياة الجديدة.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="رسائل في الحياة الجديدة">رسائل في الحياة الجديدة</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">مطبوعات روحية</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 22. قيادة -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="قيادة" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="شيوخ الكنيسه">
+                        <div class="book-hover-actions">
+                            <a href="books/شيوخ الكنيسه.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="شيوخ الكنيسة">شيوخ الكنيسة</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">رعاية وقيادة</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 23. لاهوت -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="لاهوت" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="طبيعة الإنسان">
+                        <div class="book-hover-actions">
+                            <a href="books/طبيعة الإنسان.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="طبيعة الإنسان">طبيعة الإنسان</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">لاهوت الإنسان</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 24. تاريخ -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="تاريخ" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="فترة التكوين في حياة الصادق الأمين">
+                        <div class="book-hover-actions">
+                            <a href="books/فترة التكوين في حياة الصادق الأمين خليل عبد الكريم.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="فترة التكوين في حياة الصادق الأمين">فترة التكوين</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">خليل عبد الكريم</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 25. لاهوت -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="لاهوت" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="كتاب إله العهد القديم إله الدماء؟">
+                        <div class="book-hover-actions">
+                            <a href="books/كتاب إله العهد القديم إله الدماء؟.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="إله العهد القديم إله الدماء؟">إله العهد القديم</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">لاهوت دفاعي</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 26. لاهوت -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="لاهوت" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="كتاب ضد الهرطقات">
+                        <div class="book-hover-actions">
+                            <a href="books/كتاب-ضد-الهرطقات.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="كتاب ضد الهرطقات">ضد الهرطقات</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">كتابات آبائية</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 27. روحيات -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="روحيات" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="نهج القداسة جيري ابردجز">
+                        <div class="book-hover-actions">
+                            <a href="books/نهج القداسة جيري ابردجز.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="نهج القداسة">نهج القداسة</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">جيري ابردجز</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 28. دراسات / الكتاب المقدس -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-6 book-item wow fadeInUp" data-category="دراسات" data-wow-delay="0.05s">
+                <div class="book-card-mini shadow-sm bg-white h-100">
+                    <div class="book-img-wrapper">
+                        <img class="img-fluid" src="img/books/book_default.jpg" alt="الكتاب المقدس Holly Bible">
+                        <div class="book-hover-actions">
+                            <a href="books/holly-bible.pdf" target="_blank" class="btn btn-sm btn-light rounded-circle shadow-sm m-1"><i class="fa fa-eye text-primary"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center">
+                        <h6 class="book-title text-dark mb-1 text-truncate" style="font-size: 0.85rem;" title="الكتاب المقدس">الكتاب المقدس</h6>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Holy Bible</small>
+                    </div>
                 </div>
             </div>
 

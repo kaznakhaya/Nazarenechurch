@@ -31,7 +31,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body">
+<body>
 			 
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -86,9 +86,8 @@
 
                    <a href="contact.html" class="nav-item nav-link">تواصل معنا</a>
 <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">الصفحات</a>
-                        <div class="dropdown-menu m-0">	
-                            <a href="books.html" class="dropdown-item">الكتب </a>							
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">دليل الكنيسة</a>
+                        <div class="dropdown-menu m-0">							
                             <a href="faith.html" class="dropdown-item">بنود الايمان</a>							
                             <a href="basics.html" class="dropdown-item">اساسيات الكنيسة</a>					
                             <a href="service.html" class="dropdown-item">دستور الكنيسة</a>	
@@ -156,7 +155,7 @@
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
                     <img class="position-absolute w-100 h-100 pt-5 ps-5" src="img/Nazarene_about.jpg" alt="" style="object-fit: cover;">
-                    <img class="position-absolute top-0 start-0 bg-white pe-2 pb-2" src="img/Nazarene_about2.png" alt="" style="width: 200px; height: 200px;">
+                    <img class="position-absolute top-0 start-0 " src="img/Nazarene_about2.png" alt="" style="width: 200px; height: 200px;">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -208,7 +207,11 @@
     </div>
 </div>
 <!-- قسم خدمات ورسالة الكنيسة المعدل End -->
+
+
+
  <!-- Activity Start -->
+ 
 <div class="container-fluid py-5" style="background-color: #f8f9fa;">
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 800px;">
@@ -384,36 +387,78 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    // التأكد من تحميل jQuery أولاً لتفادي المشاكل البرمجية
     if (typeof jQuery != 'undefined') {
         (function ($) {
-            var owl = $(".activities-carousel").owlCarousel({
-                autoplay: false,         /* إيقاف التحريك التلقائي بطلبك */
+
+            var $owl = $(".activities-carousel");
+
+            $owl.owlCarousel({
+                autoplay: false,
                 smartSpeed: 800,
-                center: true,            /* جعل الكرت النشط يرتكز في المنتصف */
+                center: true,
                 dots: false,
-                loop: true,              /* تحريك دائم مرن */
-                rtl: true,               /* دعم كامل ومتناسق للغة العربية خبر بخبر */
+                loop: true,
+                rtl: true,
+
                 responsive: {
-                    0: {
-                        items: 1
-                    },
-                    768: {
-                        items: 2
-                    },
-                    992: {
-                        items: 3         /* يظهر 3 عناصر ويكون الذي بالمنتصف هو المكبر والبارز */
-                    }
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    992: { items: 3 }
                 }
             });
 
-            // ربط الأسهم المخصصة خارجياً لمنع أي تداخل
-            $(".activity-custom-next").click(function () {
-                owl.trigger('next.owl.carousel');
-            });
+
+            // ==========================================
+            // الحركة التلقائية: من اليمين إلى اليسار
+            // ==========================================
+
+            var autoPlayInterval = setInterval(function () {
+                $owl.trigger('prev.owl.carousel');
+            }, 3000);
+
+
+            // ==========================================
+            // إيقاف الحركة عند تمرير الماوس
+            // ==========================================
+
+            $(".activities-carousel-wrapper").hover(
+                function () {
+                    clearInterval(autoPlayInterval);
+                },
+                function () {
+                    autoPlayInterval = setInterval(function () {
+                        $owl.trigger('prev.owl.carousel');
+                    }, 3000);
+                }
+            );
+
+
+            // ==========================================
+            // السهم الموجود فعلياً على اليمين
+            // .activity-custom-prev { right: 0; }
+            //
+            // المطلوب:
+            // السهم الأيمن → الكروت تتحرك نحو اليسار
+            // ==========================================
+
             $(".activity-custom-prev").click(function () {
-                owl.trigger('prev.owl.carousel');
+                $owl.trigger('prev.owl.carousel');
             });
+
+
+            // ==========================================
+            // السهم الموجود فعلياً على اليسار
+            // .activity-custom-next { left: 0; }
+            //
+            // المطلوب:
+            // السهم الأيسر → الكروت تتحرك نحو اليمين
+            // ==========================================
+
+            $(".activity-custom-next").click(function () {
+                $owl.trigger('next.owl.carousel');
+            });
+
+
         })(jQuery);
     }
 });
@@ -547,7 +592,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-1.jpg" style="width: 100px; height: 100px;">
                     <div class="testimonial-text rounded text-center p-4">
                         <p>"نحن في كنيسة الناصري لا نبني جدرانًا، بل نبني جسورًا من المحبة والخدمة. رسالتنا هي أن نكون عائلة واحدة تعكس نور المسيح في مجتمعنا، حيث يجد كل إنسان القبول والرجاء والنمو الروحي. ندعوكم لتشاركونا هذه المسيرة الإيمانية، لنخدم معاً وننمو في النعمة والحق."</p>
-                        <h5 class="mb-1">القس: فراس أوديشو</h5>
+                        <h5 class="mb-1">القس فراس</h5>
                         <span class="fst-italic">راعي كنيسة</span>
                     </div>
                 </div>
